@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import Header from './header';
 
 class App extends Component {
   constructor(props) {
@@ -33,15 +34,18 @@ class App extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.data.map(contact => {
-          return (
-            <li key={contact.id}>
-              {contact.name} - {contact.email}
-            </li>
-          );
-        })}
-      </ul>
+      <div className='app'>
+        <Header />
+        <ul>
+          {this.state.data.map(contact => {
+            return (
+              <li key={contact.id}>
+                {contact.name} - {contact.email}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   }
 }
