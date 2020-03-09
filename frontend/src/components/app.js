@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Header from './header';
+import CalendarComponent from './calendar';
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +37,10 @@ class App extends Component {
     return (
       <div className='app'>
         <Header />
-        <ul>
+        <div style={{ height: 500, marginTop: 10 }}>
+          <CalendarComponent />
+        </div>
+        {/* <ul>
           {this.state.data.map(contact => {
             return (
               <li key={contact.id}>
@@ -44,7 +48,7 @@ class App extends Component {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </div>
     );
   }

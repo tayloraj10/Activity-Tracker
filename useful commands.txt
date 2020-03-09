@@ -2,6 +2,13 @@ BUILD AND RUN APP
 cd frontend && npm run dev && cd .. && python manage.py runserver
 
 
+RUN REACT
+npm run dev
+
+RUN DJANGO
+python manage.py runserver
+
+
 MIGRATION
 python manage.py makemigrations backend
 python manage.py migrate
